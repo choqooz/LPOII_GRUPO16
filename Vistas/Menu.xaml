@@ -1,0 +1,13 @@
+﻿<Window x:Class="Vistas.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menu" Height="300" Width="300" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="btnGestionarSectores" Content="Gestión de Sectores" Width="200" Height="40" Margin="10"/>
+            <Button Name="btnGestionarTiposVehiculo" Content="Gestión de Tipos de Vehículo" Width="200" Height="40" Margin="10" Click="btnGestionarTiposVehiculo_Click" />
+            <Button Name="btnGestionarClientes" Content="Gestión de Clientes" Width="200" Height="40" Margin="10" Click="btnGestionarClientes_Click" />
+            <Button Name="btnGestionarEstacionamiento" Content="Gestión de Estacionamiento" Width="200" Height="40" Margin="10" Click="btnGestionarEstacionamiento_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

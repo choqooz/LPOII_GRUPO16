@@ -1,0 +1,24 @@
+﻿<Window x:Class="Vistas.FormTipoVehiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FormTipoVehiculo" Height="329" Width="356">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="PlantillaMain.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Código del Tipo de Vehículo:"/>
+            <TextBox Name="txtTVCodigo" Width="200" Margin="10"/>
+            <TextBlock Text="Descripción:"/>
+            <TextBox Name="txtDescripcion" Width="200" Margin="10"/>
+            <TextBlock Text="Tarifa:"/>
+            <TextBox Name="txtTarifa" Width="200" Margin="10"/>
+            <Button Name="btnGuardar" Content="Guardar" Width="100" Height="30" Margin="10" Click="btnGuardar_Click"  Style="{StaticResource ResourceKey=btn}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Vistas.FormCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FormCliente" Height="350" Width="353">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="EstilosMain.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="DNI del Cliente:"/>
+            <TextBox Name="txtClienteDNI" Width="200" Margin="10" Style="{StaticResource ModernTextBoxStyle}"/>
+            <TextBlock Text="Apellido:"/>
+            <TextBox Name="txtApellido" Width="200" Margin="10" Style="{StaticResource ModernTextBoxStyle}"/>
+            <TextBlock Text="Nombre:"/>
+            <TextBox Name="txtNombre" Width="200" Margin="10" Style="{StaticResource ModernTextBoxStyle}"/>
+            <TextBlock Text="Teléfono:"/>
+            <TextBox Name="txtTelefono" Width="200" Margin="10" Style="{StaticResource ModernTextBoxStyle}"/>
+            <Button Name="btnGuardar" Content="Guardar" Width="100" Height="30" Style="{StaticResource ModernButtonStyle}" Click="btnGuardar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
