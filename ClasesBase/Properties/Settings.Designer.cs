@@ -26,8 +26,9 @@ namespace ClasesBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=F:\\Desc\\LPOO2-trabajo-practico-3\\Clases" +
-            "Base\\playa.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"E:\\Documentos\\Visual Studio 2010\\Proje" +
+            "cts\\LPOII_GRUPO16\\playa.mdf\";Integrated Security=True;Connect Timeout=30;User In" +
+            "stance=True")]
         public string vehiculosConnectionString {
             get {
                 return ((string)(this["vehiculosConnectionString"]));

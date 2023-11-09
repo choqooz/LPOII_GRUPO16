@@ -5,31 +5,29 @@ using System.Text;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
-using System.Drawing;
 
 namespace ClasesBase
 {
-    public class ConversorDeEstados : IValueConverter
+    public class ConversorDeEstados : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int duracion = (int)value;
 
-            if (duracion == 0)
+            if (value == null)
             {
-                return new SolidColorBrush(Colors.Green);
-            }
-            else if (duracion > 0 && duracion <= 30)
-            {
-                return new SolidColorBrush(Colors.LightCoral);
-            }
-            else if (duracion > 30 && duracion <= 60)
-            {
-                return new SolidColorBrush(Colors.Coral);
+                return new SolidColorBrush(Colors.Transparent);
             }
             else
             {
-                return new SolidColorBrush(Colors.DarkRed);
+                int minutos = (int)value;
+                if (minutos == 0)
+                    return new SolidColorBrush(Colors.Green); // Sector libre (verde)
+                else if (minutos <= 30)
+                    return new SolidColorBrush(Colors.LightCoral); // Sector ocupado (rojo claro)
+                else if (minutos <= 60)
+                    return new SolidColorBrush(Colors.Coral); // Sector ocupado (rojo)
+                else
+                    return new SolidColorBrush(Colors.DarkRed); // Sector ocupado (rojo oscuro)
             }
         }
 

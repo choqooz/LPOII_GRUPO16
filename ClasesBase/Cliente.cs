@@ -3,37 +3,80 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.ComponentModel;
+
 namespace ClasesBase
 {
-    public class Cliente
+    public class Cliente : IDataErrorInfo
     {
-        private int clienteDni;
+        public long ClienteDNI { get; set; }
+        public string Apellido { get; set; }
+        public string Nombre { get; set; }
+        public string Telefono { get; set; }
 
-        public int ClienteDni
+        public Cliente(int clienteDNI, string apellido, string nombre, string telefono)
         {
-            get { return clienteDni; }
-            set { clienteDni = value; }
+            ClienteDNI = clienteDNI;
+            Apellido = apellido;
+            Nombre = nombre;
+            Telefono = telefono;
         }
-        private string apellido;
 
-        public string Apellido
+        public Cliente()
         {
-            get { return apellido; }
-            set { apellido = value; }
+
         }
-        private string nombre;
 
-        public string Nombre
+        // Metodos del IdataErrorInfo
+        public string Error
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { throw new NotImplementedException(); }
         }
-        private string telefono;
 
-        public string Telefono
+        public string this[string columnName]
         {
-            get { return telefono; }
-            set { telefono = value; }
+            get
+            {
+                string result = null;
+
+                if (columnName == "Apellido")
+                {
+                    if (String.IsNullOrEmpty(Apellido))
+                        result = "Ingrese Apellido";
+                }
+                else
+                {
+                    if (columnName == "Nombre")
+                    {
+                        if (String.IsNullOrEmpty(Nombre))
+                        {
+                            result = "Ingrese Nombre";
+                        }
+                    }
+                    else
+                    {
+                        if (columnName == "Telefono")
+                        {
+                            if (String.IsNullOrEmpty(Telefono) || Telefono.Length < 10)
+                            {
+                                result = "No se permite campo vacio o menos a 10 digitos";
+                            }
+                        }
+                        else
+                        {
+                            if (columnName == "ClienteDNI")
+                            {
+                                if (ClienteDNI == 8)
+                                {
+                                    result = "No se permite campo vacio o menos a 8 digitos";
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return result;
+            }
         }
     }
 }
