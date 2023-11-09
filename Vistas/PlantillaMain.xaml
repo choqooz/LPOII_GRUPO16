@@ -26,11 +26,11 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
+    
     <Style x:Key="btn" TargetType="Button">
-
+        
         <Setter Property="Template" Value="{StaticResource ResourceKey=ModernButtonTemplate}"></Setter>
-
+        
     </Style>
 
 </ResourceDictionary>

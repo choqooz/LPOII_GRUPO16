@@ -29,13 +29,13 @@ namespace Vistas
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             // Captura los valores de los TextBox y almacénalos en las propiedades del objeto Cliente.
-            oCliente.ClienteDni = int.Parse(txtClienteDNI.Text);
+            oCliente.ClienteDNI = int.Parse(txtClienteDNI.Text);
             oCliente.Apellido = txtApellido.Text;
             oCliente.Nombre = txtNombre.Text;
             oCliente.Telefono = txtTelefono.Text;
 
             // Imprime los valores de las propiedades en un MessageBox para verificar que los datos se han almacenado.
-            MessageBox.Show("DNI: " + oCliente.ClienteDni + "\nApellido: " + oCliente.Apellido + "\nNombre: " + oCliente.Nombre + "\nTeléfono: " + oCliente.Telefono);
+            MessageBox.Show("DNI: " + oCliente.ClienteDNI + "\nApellido: " + oCliente.Apellido + "\nNombre: " + oCliente.Nombre + "\nTeléfono: " + oCliente.Telefono);
         }
     }
 }

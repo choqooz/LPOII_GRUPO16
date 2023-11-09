@@ -14,19 +14,13 @@ using System.Windows.Shapes;
 namespace Vistas
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for ValidarCliente.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class ValidarCliente : Window
     {
-        public Login()
+        public ValidarCliente()
         {
             InitializeComponent();
         }
-
-        private void btnAceptar_Click(object sender, RoutedEventArgs e)
-        { 
-        }
-
-
     }
 }

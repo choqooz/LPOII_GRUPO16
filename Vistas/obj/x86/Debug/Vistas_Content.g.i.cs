@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tiempo.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tiempos.xml")]
 
 
